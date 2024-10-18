@@ -1,0 +1,98 @@
+@font-face {
+    font-family: "Knockout bold";
+    src: url("./fuente/Knockout/Knockout-Bold.otf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Knockout","Helvetica","Arial",sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+header{
+    height: auto;
+    padding: 30px 60px;
+}
+
+nav{
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.brand{
+    width: 120px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.logo{
+    height: auto;
+}
+div.brand svg{
+    width: 100%;
+    fill: white;
+    height: 4.5rem;
+}
+div.brand a{
+    height: auto;
+}
+
+div.desplegable button{
+    background-color: transparent;
+    color: white;
+    border: none;
+    width: 30px;
+}
+
+.opc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.opc a:nth-child(2){
+    background-color: #ee2737;
+}
+.btns{
+    border: 2px solid white;
+}
+.botons{
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    font-weight: bolder;
+}
+
+#banner{
+    height: 60vh
+}
+#banner span{
+    font-weight: 700;
+    font-size: 140px;
+    font-family: "Knockout bold";
+}
+.confill{
+    color: white;
+    -webkit-text-stroke: 2px white;
+}
+.sinfill{
+    color: black;
+    -webkit-text-stroke: 2px white;
+}
+
+.fila1{
+}
+.frase1,.frase2,.frase3,.fila1{
+    display: flex;
+}
