@@ -6,9 +6,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
     burger.addEventListener("click", () =>{
         desplegable.style.height = "100%";
         desplegable.style.backgroundColor = "#EE2737";
-    ç})
+    })
 
     cross.addEventListener("click", () =>{
         desplegable.style.height = "0%";
     })
+    
 })

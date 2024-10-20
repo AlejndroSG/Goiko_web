@@ -1,6 +1,10 @@
 @font-face {
-    font-family: "Knockout bold";
-    src: url("./fuente/Knockout/Knockout-Bold.otf");
+    font-family: Knockout;
+    src: url('./fuente/Knockout-HTF33-JuniorHeviwt.291432cdf9638ce91c1d.woff2');
+}
+@font-face {
+    font-family: KnockoutBig;
+    src: url('./fuente/Knockout-HTF73-FullHeviweight.386a901fd564bd4a47c7.woff2');
 }
 
 *{
@@ -24,6 +28,11 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+a{
+    text-decoration: none;
+    font-family: KnockoutBig;
 }
 
 div.brand{
@@ -80,7 +89,7 @@ div.desplegable button{
     height: 0;
     width: 100%;
     bottom: 100%;
-    transition: height 0.5s;
+    transition: height 0.5s cubic-bezier(0.78, 0, 0.13, 1);;
     overflow: hidden;
     z-index: 999;
 }
@@ -94,7 +103,7 @@ div.desplegable button{
 #banner span{
     font-weight: 700;
     font-size: 140px;
-    font-family: "Knockout bold";
+    font-family: KnockoutBig;
     margin: 0%;
     padding: 0%;
 }
@@ -127,11 +136,11 @@ div.desplegable button{
 }
 .confill{
     color: white;
-    -webkit-text-stroke: 2px white;
+    -webkit-text-stroke: 1px white;
 }
 .sinfill{
-    color: black;
-    -webkit-text-stroke: 2px white;
+    color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke: 1px white;
 }
 
 .der{
@@ -177,4 +186,110 @@ div.desplegable button{
 .video video{
     max-width: 100%;
     line-height: 1;
+}
+
+#slider{
+    width: 100%;
+    height: 80vh;
+    padding: 60px 60px;
+    background: url(./img/imagenes/Carrusel_2x1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    border-top: 2px solid white;
+    margin: 100px 0 20px 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+#slider .botones{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+}
+#slider button{
+    background-color: transparent;
+    border: none;
+}
+#slider .botones .circulo{
+    fill: black;
+    stroke: white;
+    width: 80px;
+    height: 80px;
+    margin-left: 20px;
+}
+
+#slider .oferta{
+    color: white;
+    width: 60%;
+    display: flex;
+    flex-flow: column;
+    justify-content: end;
+    height: 50vh;
+}
+
+.oferta .ofer{
+    display: flex;
+    flex-flow: column;
+    margin: 20px 0;
+}
+
+.oferta .ofer span{
+    font-size: 5.5rem;
+    font-family: KnockoutBig;
+}
+.flechita{
+    width: 13px;
+    fill: white;
+}
+.botonHover{
+    color: white;
+    font-size: 1.5rem;
+    font-family: KnockoutBig;
+}
+
+#carta{
+    width: 100%;
+    height: 60vh;
+}
+#carta > div:first-child{
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    display: flex;
+    padding: 12px 0;
+}
+
+#carta span{
+    font-weight: 700;
+    font-size: 140px;
+    font-family: KnockoutBig;
+    margin: 0%;
+    padding: 0%;
+}
+
+#carta .cartaslide{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 60px;
+    width: 270%;;
+}
+.cartaslide a{
+    height: 100%;
+    width: 10%;
+}
+.cartaslide .botonHover{
+    margin: 5px 0 3px 0;
+}
+.cartaslide a div img{
+    max-width: 100%;
+    border-radius: 20px;
+    object-fit: fill;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+.cartaslide a>p{
+    font-size: 1rem;
+    color: #8d8d8d;
 }
