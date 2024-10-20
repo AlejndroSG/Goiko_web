@@ -74,13 +74,56 @@ div.desplegable button{
     font-weight: bolder;
 }
 
+#desplegable{
+    position: absolute;
+    top: 0%;
+    height: 0;
+    width: 100%;
+    bottom: 100%;
+    transition: height 0.5s;
+    overflow: hidden;
+    z-index: 999;
+}
+
 #banner{
-    height: 60vh
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 #banner span{
     font-weight: 700;
     font-size: 140px;
     font-family: "Knockout bold";
+    margin: 0%;
+    padding: 0%;
+}
+.contenedor{
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+.fila1, .fila2, .fila3, .fila4{
+    display: flex;
+    align-items: center;
+    height: 13vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.filas{
+    display: flex;
+    width: 200%;
+    overflow: hidden;
+    position: absolute;
+}
+.izq{
+    display: flex;
+    /* animation: mover-derecha 10s linear infinite; */
+}
+.der{
+    /* animation: mover-izquierda 10s linear infinite; */
+    display: flex;
 }
 .confill{
     color: white;
@@ -91,8 +134,47 @@ div.desplegable button{
     -webkit-text-stroke: 2px white;
 }
 
-.fila1{
+.der{
+    .frase1, .frase2, .frase3, .frase4{
+        display: flex;
+        animation: mover-derecha 30s linear infinite;
+    }
 }
-.frase1,.frase2,.frase3,.fila1{
-    display: flex;
+.izq{
+    .frase1, .frase2, .frase3{
+        display: flex;
+        animation: mover-izquierda 21s linear infinite;
+    }
+}
+
+@keyframes mover-derecha {
+    0% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes mover-izquierda {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.video {
+    height: 96vh;
+    margin: 0 auto 4vh;
+    position: absolute;
+    width: 96vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+}
+.video video{
+    max-width: 100%;
+    line-height: 1;
 }
