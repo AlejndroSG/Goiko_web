@@ -74,6 +74,9 @@ div.desplegable button{
 .btns{
     border: 2px solid white;
 }
+.opc button{
+    z-index: 999;
+}
 .botons{
     padding: 10px 20px;
     border-radius: 50px;
@@ -91,27 +94,29 @@ div.desplegable button{
     bottom: 100%;
     transition: height 0.5s cubic-bezier(0.78, 0, .13, 1);;
     overflow: hidden;
-    z-index: 999;
+    z-index: 998;
 }
 
 .cerrar{
-    width: 8rem;
-    height: 100%;
+    width: 9rem;
+    height: 27vh;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
+    align-items: center;
 }
 .cerrar .cross{
     width: 100%;
-    height: 100%;
+    height: 50%;
     color: white;
     background-color: black;
     display: flex;
     align-items: center;
-    justify-content: center;;
+    justify-content: center;
+    border: none;
 }
 .cerrar .cross span{
-    font-size: 7rem;
+    font-size: 5rem;
 }
 
 .container{
@@ -125,33 +130,45 @@ div.desplegable button{
 }
 
 #desplegable .menu{
-    display: flex;
-    gap: 50px;
+    display: flex;;
     width: 100%;
     height: 100%;
-    align-items: center;
+    flex-flow: column;
+    gap: 50px;
 }
 
 .opciones{
-    height: 100vh;
+    height: 70vh;
     display: flex;
     flex-flow: column;
-    justify-content: center;
+    justify-content: end;
 }
 .opciones a{
-    font-size: 8rem;
+    font-size: 7rem;
+    color: white;
 }
 
 #desplegable .cerrar .vuelta{
     transform: rotate(-90deg);
-    padding-right: 100px;
+    padding-right: 150px;
+    width: 100%;
 }
 
-#desplegable .cerrar a span{
-    font-family: KnockoutBig;
-    font-size: 3rem;
+#desplegable .cerrar a{
+    width: 8rem;
+    height: auto;
     display: flex;
     justify-content: end;
+    fill: white;
+}
+
+.extras{
+    width: 30%;
+    display: flex;
+    
+}
+.extras a{
+
 }
 
 
