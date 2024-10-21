@@ -3,8 +3,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
     let burger = document.querySelector(".desplegable .burger");
     let cross = document.querySelector(".cerrar .cross");
     let enlaces = document.querySelectorAll(".menu .opciones a");
-    let enlaces2 = document.querySelectorAll(".menu .extras");
-    let hovHR = document.querySelectorAll(".menu .opciones a hr");
 
     burger.addEventListener("click", () =>{
         desplegable.style.height = "100%";
@@ -25,8 +23,4 @@ document.addEventListener("DOMContentLoaded", ()=>{
             enlace.style.color="white";
         })
     })
-
-    enlaces2.forEach
-    
-
 })

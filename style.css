@@ -146,6 +146,7 @@ div.desplegable button{
 .opciones a{
     font-size: 7rem;
     color: white;
+    width: 70%;
 }
 
 #desplegable .cerrar .vuelta{
@@ -175,14 +176,23 @@ div.desplegable button{
     width: 300px;
     display: block;
     color: white;
+    margin-bottom: 10px;
 }
-.extras a hr{
-    position: absolute;
-    width: 15rem;
+
+.extras a::after{
+    content:"";
+    height: 2px;
+    width: 0px;
+    background-color: white;
+    display: block;
+    transition: width 300ms;
+}
+.extras a:hover::after{
+    width: 100%;
 }
 
 #banner{
-    height: 70vh;
+    height: 80vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -265,7 +275,7 @@ div.desplegable button{
     width: 96vh;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -55%);
+    transform: translate(-50%, -50%);
 }
 .video video{
     max-width: 100%;
