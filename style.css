@@ -163,14 +163,23 @@ div.desplegable button{
 }
 
 .extras{
-    width: 30%;
+    width: 50rem;
     display: flex;
-    
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: auto;
 }
 .extras a{
-
+    font-family: Knockout;
+    font-size: 1.8rem;
+    width: 300px;
+    display: block;
+    color: white;
 }
-
+.extras a hr{
+    position: absolute;
+    width: 15rem;
+}
 
 #banner{
     height: 70vh;
