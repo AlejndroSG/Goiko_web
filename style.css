@@ -77,14 +77,57 @@ div.desplegable button{
 .opc button{
     z-index: 999;
 }
+
+
 .botons{
-    padding: 10px 20px;
-    border-radius: 50px;
-    text-decoration: none;
     color: white;
-    background-color: transparent;
-    font-weight: bolder;
+    padding: 10px 20px;
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: inherit;
 }
+
+.butNormal, .butHover{
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    transition: all .1s ease;
+}
+
+.butHover{
+    position: absolute;
+    inset: 0;
+    transform: translate(0%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opc a:hover .butNormal{
+    transform: translate(0%,-200%);
+}
+
+.opc a:hover .butHover{
+    transform: translate(0%,0%);
+}
+
+.opc a:first-child{
+    border: solid 2px white;
+}
+.opc a:first-child:hover .butHover{
+    background-color: white;
+    color: black;
+}
+.opc a:nth-child(2):hover .butHover{
+    background-color: #FFB600;
+    color: black;
+}
+
 
 #desplegable{
     position: absolute;
@@ -92,7 +135,7 @@ div.desplegable button{
     height: 0;
     width: 100%;
     bottom: 100%;
-    transition: height 0.5s cubic-bezier(0.78, 0, .13, 1);;
+    transition: height 0.5s cubic-bezier(0.78, 0, .13, 1);
     overflow: hidden;
     z-index: 998;
 }
@@ -198,7 +241,6 @@ div.desplegable button{
     align-items: center;
 }
 #banner span{
-    font-weight: 700;
     font-size: 140px;
     font-family: KnockoutBig;
     margin: 0%;
@@ -225,19 +267,17 @@ div.desplegable button{
 }
 .izq{
     display: flex;
-    /* animation: mover-derecha 10s linear infinite; */
 }
 .der{
-    /* animation: mover-izquierda 10s linear infinite; */
     display: flex;
 }
 .confill{
     color: white;
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 2px white;
 }
 .sinfill{
     color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 2px white;
 }
 
 .fraseder{
@@ -338,15 +378,54 @@ div.desplegable button{
     width: 13px;
     fill: white;
 }
-.botonHover{
+.oferta a{
     color: white;
     font-size: 1.5rem;
     font-family: KnockoutBig;
 }
 
+.botonHover {
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .botonHover span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-family: KnockoutBig;
+  }
+  
+  .botonHover span:first-child {
+    z-index: 1;
+  }
+  
+  .botonHover span:last-child {
+    z-index: 2;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  
+  .botonHover:hover {
+    color: #fff;
+  }
+  
+  .botonHover:hover span:first-child {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  
+  .botonHover:hover span:last-child {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
 #carta{
     width: 100%;
-    height: 60vh;
+    height: auto;
 }
 #carta > div:first-child{
     border-top: 2px solid white;
@@ -355,8 +434,7 @@ div.desplegable button{
     padding: 12px 0;
 }
 
-#carta span{
-    font-weight: 700;
+#carta > div:nth-child(1) span{
     font-size: 140px;
     font-family: KnockoutBig;
     margin: 0%;
@@ -376,6 +454,11 @@ div.desplegable button{
 .cartaslide .botonHover{
     margin: 5px 0 3px 0;
 }
+.cartaslide span{
+    font-size: 1.5rem;
+    color: white;
+    font-family: KnockoutBig;
+}
 .cartaslide a div img{
     max-width: 100%;
     border-radius: 20px;
@@ -383,7 +466,48 @@ div.desplegable button{
     border: 2px solid white;
     border-radius: 20px;
 }
+
+.cartaslide img:hover {
+    filter: hue-rotate(1deg) saturate(0.5);
+    position: relative;
+  }
+
 .cartaslide a>p{
     font-size: 1rem;
     color: #8d8d8d;
+    margin-top: 35px;
 }
+
+#contador{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contador > div{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+#contador > div span{
+    color: white;
+    font-size: 3rem;
+    font-family: KnockoutBig;
+}
+
+#contador .nums{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+#contador .nums div:nth-child(2),div:nth-child(3){
+    display: flex;
+    gap: 20px;
+}
+#contador .nums img{
+    width: 100px;
+}
+
