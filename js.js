@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     let cross = document.querySelector(".cerrar .cross");
     let enlaces = document.querySelectorAll(".menu .opciones a");
     let slider = document.querySelector("section#slider");
+    let sliderdivs = document.querySelectorAll("section#slider div");
 
     burger.addEventListener("click", () =>{
         desplegable.style.height = "100%";
@@ -28,8 +29,14 @@ document.addEventListener("DOMContentLoaded", ()=>{
     window.addEventListener("scroll", () =>{
         if(window.scrollY > slider.offsetTop - window.innerHeight/4){
             slider.classList.add("tam");
+            sliderdivs.forEach(div => {
+                div.style.opacity = "1";
+            })
         }else{
             slider.classList.remove("tam");
+            sliderdivs.forEach(div => {
+                div.style.opacity = "0";
+            })
         }
         if(window.scrollY > slider.offsetTop - window.innerHeight/3){
             slider.classList.add("tam2");
