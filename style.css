@@ -19,7 +19,8 @@ body{
 }
 
 header{
-    height: auto;
+    height: 15vh;
+    width: 100%;
     padding: 30px 60px;
 }
 
@@ -323,36 +324,40 @@ div.desplegable button{
 }
 
 .tam4{
-    scale: 0.25 !important;
+    width: 45% !important;
     opacity: 0.25 !important;
 }
 .tam3{
-    scale: 0.50 !important;
+    width: 60% !important;
     opacity: 0.50 !important;
 }
 .tam2{
-    scale: 0.75 !important;
+    width: 75% !important;
     opacity: 0.75 !important;
 }
 .tam{
-    scale: 1 !important;
+    width: 100% !important;
     opacity: 1 !important;
+    border-left: 0px !important;
+    border-right: 0px !important;
 }
 
 #slider{
-    height: 80vh;
+    height: auto;
     padding: 60px 60px;
     background: url(./img/imagenes/Carrusel_2x1.jpg);
-    background-size: cover;
+    /* background-size: cover; */
     background-position: center;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
-    border-top: 2px solid white;
-    margin: 100px 0 20px 0;
+    border: 2px solid white;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 20px;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    scale: 0;
+    width: 30%;
     transition: all 0.5s;
     opacity: 0;
 }
@@ -464,11 +469,13 @@ div.desplegable button{
     display: flex;
     justify-content: space-between;
     margin: 50px 60px;
-    width: 270%;;
+    width: 270%;
+    gap: 25px;
+    flex: 1;
 }
 .cartaslide a{
-    height: 100%;
-    width: 10%;
+    height: 70vh;
+    width: 100%;
 }
 .cartaslide .botonHover{
     margin: 5px 0 3px 0;
@@ -481,8 +488,8 @@ div.desplegable button{
 .cartaslide a div img{
     max-width: 100%;
     border-radius: 20px;
-    object-fit: fill;
-    border: 2px solid white;
+    object-fit: cover;
+    /* border: 2px solid white; */
     border-radius: 20px;
 }
 
@@ -495,6 +502,50 @@ div.desplegable button{
     font-size: 1rem;
     color: #8d8d8d;
     margin-top: 35px;
+}
+a:first-child .comun{
+    background: url(./img/imagenes/TO-SHARE.png);
+}
+
+a:nth-child(2) .comun{
+    background: url(./img/imagenes/BURGERS.png);
+}
+
+a:nth-child(3) .comun{
+    background: url(./img/imagenes/SMASH-1.png);
+}
+
+a:nth-child(4) .comun{
+    background: url(./img/imagenes/GOIKO-KIDS-2.png);
+}
+
+a:nth-child(5) .comun{
+    background: url(./img/imagenes/CATEGORIA_HOME_SALAD.jpg);
+}
+
+a:nth-child(6) .comun{
+    background: url(./img/imagenes/CATEGORIA_HOME_BEBIDAS.jpg);
+}
+
+a:nth-child(7) .comun{
+    background: url(./img/imagenes/FROZEN_ORIGINAL_1200x600px.png);
+}
+
+a:nth-child(8) .comun{
+    background: url(./img/imagenes/MENU-DEL-DIA_COCACOLA.png);
+}
+
+a:nth-child(9) .comun{
+    background: url(./img/imagenes/RESERVAS_1800x1200.png);
+}
+.cartaslide a > .comun{
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid white;
+    border-radius: 20px;
 }
 
 #contador{
