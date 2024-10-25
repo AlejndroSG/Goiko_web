@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     let letrasrellenas = document.querySelectorAll("svg .filled");
     let letrassinrellenas = document.querySelectorAll("svg .stroked");
     let svgflecha = document.querySelector("svg .fl");
+    // let cartaslide = document.querySelector(".cartaslide");
 
     burger.addEventListener("click", () =>{
         desplegable.style.height = "100%";
@@ -68,4 +69,34 @@ document.addEventListener("DOMContentLoaded", ()=>{
         })
         svgflecha.style.fill = "white";
     })
+
+    let inicioX;
+    let scrollLeft;
+    let mover = false; // Agrega esta variable
+    
+    const cartaslide = document.querySelector(".cartaslide");
+    
+    cartaslide.addEventListener("mousedown", (e) => {
+      e.preventDefault();
+      mover = true;
+      inicioX = e.clientX - cartaslide.offsetLeft;
+      scrollLeft = cartaslide.scrollLeft;
+    });
+    
+    cartaslide.addEventListener("mouseup", (e) => {
+        e.preventDefault();
+      mover = false;
+    });
+    
+    cartaslide.addEventListener("mouseleave", () => {
+      mover = false;
+    });
+    
+    cartaslide.addEventListener("mousemove", (e) => {
+      if (!mover) return;
+      e.preventDefault();
+      const x = e.clientX - cartaslide.offsetLeft;
+      const desplazamiento = x - inicioX;
+      cartaslide.scrollLeft = scrollLeft - desplazamiento;
+    });
 })
