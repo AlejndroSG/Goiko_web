@@ -5,7 +5,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
     let enlaces = document.querySelectorAll(".menu .opciones a");
     let slider = document.querySelector("section#slider");
     let sliderdivs = document.querySelectorAll("section#slider div");
-    let header = document.querySelector("header");
+    let rueda = document.querySelector(".rueda");
+    let letrasrellenas = document.querySelectorAll("svg .filled");
+    let letrassinrellenas = document.querySelectorAll("svg .stroked");
+    let svgflecha = document.querySelector("svg .fl");
 
     burger.addEventListener("click", () =>{
         desplegable.style.height = "100%";
@@ -36,31 +39,33 @@ document.addEventListener("DOMContentLoaded", ()=>{
             })
             slider.style.borderRight = "0";
             slider.style.borderLeft = "0";
-            // header.style.opacity = "0";
         }else{
             sliderdivs.forEach(div => {
                 div.style.opacity = "0";
             })
             slider.style.border = "2px solid white";
-            // header.style.opacity = "1";
         }
+    })
 
-        // if(window.scrollY > slider.offsetTop - window.innerHeight/3){
-        //     header.style.opacity = "0.33";
-        // }else{
-        //     header.style.opacity = "0.66";
-        // }
+    rueda.addEventListener("mouseover", () =>{
+        rueda.style.backgroundColor = "white";
+        letrasrellenas.forEach(letras => {
+            letras.style.fill = "#EE2737";
+        })
+        letrassinrellenas.forEach(letras => {
+            letras.style.stroke = "#EE2737";
+        })
+        svgflecha.style.fill = "#EE2737";
+    })
 
-        // if(window.scrollY > slider.offsetTop - window.innerHeight/2){
-        //     header.style.opacity = "0.66";
-        // }else{
-        //     header.style.opacity = "0.33";
-        // }
-
-        // if(window.scrollY > slider.offsetTop - window.innerHeight){
-        //     header.style.opacity = "1";
-        // }else{
-        //     header.style.opacity = "0";
-        // }
+    rueda.addEventListener("mouseout", () =>{
+        rueda.style.backgroundColor = "black";
+        letrasrellenas.forEach(letras => {
+            letras.style.fill = "white";
+        })
+        letrassinrellenas.forEach(letras => {
+            letras.style.stroke = "white";
+        })
+        svgflecha.style.fill = "white";
     })
 })
