@@ -16,6 +16,7 @@
 
 body{
     background-color: black;
+    overflow-x: hidden;
 }
 
 header{
@@ -305,6 +306,28 @@ div.desplegable button{
     100% {
         transform: rotate(360deg);
     }
+}
+
+.rrss{
+    display: flex;
+    width: 18%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rrss a{
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.rrss a svg{
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    fill: #ee2737;
 }
 
 #banner{
@@ -773,4 +796,438 @@ background: linear-gradient(180deg, rgba(255,255,255,0) 44%, rgba(0,0,0,1) 99%);
     font-size: 1.5rem;
 }
 
+#ingredientes{
+    position: relative;
+    margin: 100px 0;
+    width: 100%;
+    height: 100vh;
+    padding: 150px 50px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px; */
+}
+#ingredientes > div{
+    color: white;
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between; 
+    flex-flow: column;
+}
 
+#ingredientes > div > div:nth-child(2){
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 25px;
+    justify-content: end;
+}
+#ingredientes > div > div:nth-child(2)> span{
+    font-size: 4.5rem;
+    font-family: Knockout;
+}
+
+#ingredientes > div > div:nth-child(2)> p{
+    width: 30%;
+}
+#ingredientes > div > div:nth-child(2)> a div span{
+    font-family: KnockoutBig;
+}
+
+.imagesmove{
+    position: absolute;
+}
+.salsa{
+    width: 27.5%;
+}
+
+.imagesmove img{
+    max-width: 100%;
+}
+
+.salsa{
+    aspect-ratio: 10 / 21;
+    view-timeline-name: --efecto;
+    view-timeline-axis: block;
+    animation-timeline: --efecto;
+    animation-name: changepossalsa;
+    animation-range: entry 0% cover 70%;
+    animation-fill-mode: both;
+    transition: all 0.5s;
+    /* transform-origin: 0% 100%; */
+    z-index: 1;
+}
+.salsa img{
+    aspect-ratio: 10 / 21;
+    view-timeline-name: --efecto;
+    view-timeline-axis: block;
+    animation-timeline: --efecto;
+    animation-name: rotarsalsa;
+    animation-range: entry 0% cover 70%;
+    animation-fill-mode: both;
+    transition: all 1s;
+    transform-origin: 0% 100%;
+    z-index: 1;
+}
+
+@keyframes changepossalsa {
+    0%{
+        /* opacity: 0; */
+        /* scale: 0; */
+        /* transform: translateY(-120px); */
+        transform: translateX(300px);
+        /* rotate: -10deg; */
+    }
+    100%{
+        /* opacity: 1; */
+        /* scale: 50%; */
+        /* transform: translateY(120px); */
+        transform: translateX(1100px);
+        /* rotate: -40deg; */
+    }
+}
+@keyframes rotarsalsa {
+    0%{
+        /* opacity: 0; */
+        /* scale: 0; */
+        rotate: -10deg;
+    }
+    100%{
+        /* opacity: 1; */
+        /* scale: 50%; */
+        rotate: -45deg;
+    }
+}
+
+.burgers{
+    /* aspect-ratio: 7.2 / 4;     */
+    position: absolute;
+    view-timeline-name: --efecto;
+    view-timeline-axis: block;
+    animation-timeline: --efecto;
+    animation-name: changeposburgers;
+    animation-range: entry 0% cover 60%;
+    animation-fill-mode: both;
+    transition: all 0.5s;
+    z-index: 3;
+    top: 0%;
+    /* transform-origin: 0% 100%; */
+}
+.burgers img{
+    /* aspect-ratio: 7.2 / 4;     */
+    view-timeline-name: --efecto;
+    view-timeline-axis: block;
+    animation-timeline: --efecto;
+    animation-name: rotarsburgers;
+    animation-range: entry 0% cover 60%;
+    animation-fill-mode: both;
+    transition: all 1s;
+    transform-origin: 0% 100%;
+    z-index: 3;
+}
+
+@keyframes changeposburgers {
+    0%{
+        /* opacity: 0; */
+        /* scale: 0; */
+        /* transform: translateY(-120px); */
+        transform: translateX(300px);
+        top: 100px;
+        /* rotate: -10deg; */
+    }
+    100%{
+        /* opacity: 1; */
+        /* scale: 50%; */
+        /* transform: translateY(120px); */
+        transform: translateX(1000px);
+        top: 300px;
+        /* rotate: -40deg; */
+    }
+}
+@keyframes rotarsburgers {
+    0%{
+        /* opacity: 0; */
+        /* scale: 0; */
+        rotate: -40deg;
+    }
+    100%{
+        /* opacity: 1; */
+        /* scale: 50%; */
+        rotate: 15deg;
+    }
+}
+
+.pan{
+    /* aspect-ratio: 7.2 / 4;     */
+    position: absolute;
+    view-timeline-name: --efecto;
+    view-timeline-axis: block;
+    animation-timeline: --efecto;
+    animation-name: changepospan;
+    animation-range: entry 0% cover 60%;
+    animation-fill-mode: both;
+    transition: all 0.5s;
+    z-index: 2;
+    top: -100px;
+    /* transform-origin: 0% 100%; */
+}
+.pan img{
+    /* aspect-ratio: 7.2 / 4;     */
+    view-timeline-name: --efecto;
+    view-timeline-axis: block;
+    animation-timeline: --efecto;
+    animation-name: rotarpan;
+    animation-range: entry 0% cover 60%;
+    animation-fill-mode: both;
+    transition: all 1s;
+    transform-origin: 0% 100%;
+    z-index: 2;
+}
+
+@keyframes changepospan {
+    0%{
+        /* opacity: 0; */
+        /* scale: 0; */
+        /* transform: translateY(-120px); */
+        transform: translateX(300px);
+        /* rotate: -10deg; */
+    }
+    100%{
+        /* opacity: 1; */
+        /* scale: 50%; */
+        /* transform: translateY(120px); */
+        transform: translateX(1400px);
+        /* rotate: -40deg; */
+    }
+}
+@keyframes rotarpan {
+    0%{
+        /* opacity: 0; */
+        /* scale: 0; */
+        rotate: -10deg;
+    }
+    100%{
+        /* opacity: 1; */
+        /* scale: 50%; */
+        rotate: 45deg;
+    }
+}
+
+#noticias{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 180px;
+    border-radius: 20px;
+}
+#noticias > div:first-child{
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    display: flex;
+    padding: 12px 0;
+}
+
+#noticias > div:nth-child(1) span{
+    font-size: 140px;
+    font-family: KnockoutBig;
+    margin: 0%;
+    padding: 0%;
+}
+
+#noticias > div:nth-child(2){
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.articulos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 60px 50px;
+}
+
+.articulos > a{
+    width: 35%;
+    text-decoration: none;
+    color: white;
+}
+.articulos > a > span{
+    font-family: Knockout;
+    font-size: 2rem;
+}
+.articulos > a > p{
+    margin: 10px 0;
+}
+.articulos .comun > img{
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+.articulos a::after{
+    content:"";
+    height: 2px;
+    width: 0px;
+    background-color: white;
+    display: block;
+}
+.articulos a:hover::after{
+    width: 100%;
+}
+
+.btn-23 {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    border: 20px solid white;
+}
+
+.btn-23:-moz-focusring {
+  outline: auto;
+}
+
+.btn-23 {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+}
+
+.btn-23 span {
+  display: grid;
+  inset: 0;
+  place-items: center;
+  position: absolute;
+  transition: opacity 0.2s ease;
+}
+
+.btn-23 .marquee {
+  --spacing: 15em;
+  --start: 0em;
+  --end: 15em;
+  -webkit-animation: marquee 1s linear infinite;
+  animation: marquee 1s linear infinite;
+  opacity: 0;
+  position: relative;
+  text-shadow: #fff var(--spacing) 0, #fff calc(var(--spacing) * -1) 0,
+    #fff calc(var(--spacing) * -2) 0;
+}
+
+.btn-23:hover .marquee {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  opacity: 1;
+}
+
+.btn-23:hover .text {
+  opacity: 0;
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    transform: translateX(var(--start));
+  }
+
+  to {
+    transform: translateX(var(--end));
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(var(--start));
+  }
+
+  to {
+    transform: translateX(var(--end));
+  }
+}
+
+footer{
+    background-color: white;
+    height: 120vh;
+    padding: 90px 65px;
+}
+
+#principal{
+    height: 70vh;
+    display: flex;
+}
+#principal > div:first-child{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+#principal > div:nth-child(1) > a >svg{
+    height: 200px;
+}
+
+.opcion{
+    width: 30%;
+    display: flex;
+    flex-flow: column;
+}
+.opcion a{
+    text-decoration: none;
+    color: #000;
+}
+.opcion a span{
+    font-size: 3rem;
+}
+
+.masopc{
+    width: 20%;
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+    padding-left: 100px;
+}
+.masopc a{
+    text-decoration: none;
+    color: #000;
+    font-family: Knockout;
+}
+
+.masopc a::after{
+    content:"";
+    height: 2px;
+    width: 0px;
+    background-color: black;
+    display: block;
+    transition: width 300ms;
+}
+.masopc a:hover::after{
+    width: 200px;
+}
+
+.reds{
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reds a{
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.reds a svg{
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    fill: white;
+}

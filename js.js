@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     let burger = document.querySelector(".desplegable .burger");
     let cross = document.querySelector(".cerrar .cross");
     let enlaces = document.querySelectorAll(".menu .opciones a");
+    let enlaces2 = document.querySelectorAll("#principal .opcion a");
     let slider = document.querySelector("section#slider");
     let sliderdivs = document.querySelectorAll("section#slider div");
     let rueda = document.querySelector(".rueda");
@@ -10,6 +11,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
     let letrassinrellenas = document.querySelectorAll("svg .stroked");
     let svgflecha = document.querySelector("svg .fl");
     // let cartaslide = document.querySelector(".cartaslide");
+    let rrss = document.querySelectorAll(".rrss a");
+    let reds = document.querySelectorAll(".reds a");
 
     burger.addEventListener("click", () =>{
         desplegable.style.height = "100%";
@@ -30,6 +33,17 @@ document.addEventListener("DOMContentLoaded", ()=>{
         enlace.addEventListener("mouseout", () => {
             enlace.classList.remove("sinfill");
             enlace.style.color="white";
+        })
+    })
+
+    enlaces2.forEach(enlace => {
+        enlace.addEventListener("mouseover", () => {
+            enlace.style.color="rgba(0, 0, 0, 0)";
+            enlace.style.webkitTextStroke = "2px black";
+        })
+        enlace.addEventListener("mouseout", () => {
+            enlace.style.color="black";
+            enlace.style.webkitTextStroke = "0px black";
         })
     })
 
@@ -99,4 +113,28 @@ document.addEventListener("DOMContentLoaded", ()=>{
       const desplazamiento = x - inicioX;
       cartaslide.scrollLeft = scrollLeft - desplazamiento;
     });
+
+    rrss.forEach(rrss => {
+        let svgg = rrss.querySelector("svg");
+        rrss.addEventListener("mouseover", () => {
+            rrss.style.backgroundColor = "#EE2737";
+            svgg.style.fill = "white";
+        })
+        rrss.addEventListener("mouseout", () => {
+            rrss.style.backgroundColor = "white";
+            svgg.style.fill = "#EE2737";
+        })
+    })
+
+    reds.forEach(red => {
+        let svgg = red.querySelector("svg");
+        red.addEventListener("mouseover", () => {
+            red.style.backgroundColor = "white";
+            svgg.style.fill = "black";
+        })
+        red.addEventListener("mouseout", () => {
+            red.style.backgroundColor = "black";
+            svgg.style.fill = "white";
+        })
+    })
 })
