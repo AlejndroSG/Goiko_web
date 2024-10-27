@@ -355,15 +355,13 @@ div.desplegable button{
 }
 
 #banner span{
-    font-size: 140px;
+    font-size: 10rem;
     font-family: KnockoutBig;
     margin: 0%;
     padding: 0%;
 }
 .contenedor{
     width: 100%;
-    height: auto;
-    align-items: center;
 }
 .fila{
     display: flex;
@@ -375,9 +373,11 @@ div.desplegable button{
 }
 .filas{
     display: flex;
-    width: 200%;
+    /* width: 200%; */
+    height: 100%;
+    align-items: center;
     overflow: hidden;
-    position: absolute;;
+    position: absolute;
 }
 .izq{
     display: flex;
@@ -397,10 +397,12 @@ div.desplegable button{
 .fraseder{
     display: flex;
     animation: mover-derecha 30s linear infinite;
+    height: auto;
 }
 .fraseiz{
     display: flex;
     animation: mover-izquierda 21s linear infinite;
+    height: auto;
 }
 
 
@@ -687,21 +689,22 @@ div.desplegable button{
     align-items: center;
     border-radius: 25px;
     margin-bottom: 10px;
+    padding: 0 50px;
 }
 #coin > div{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70%;
-    gap: 20px;
-    margin: auto;
+    width: 100%;
     margin-top: 50px;
     padding-bottom: 50px;
 }
+
 #coin > div > div:nth-child(2){
     display: flex;
     flex-flow: column;
     gap: 20px;
+    width: 40%;
 }
 #coin p{
     color: white;
@@ -802,10 +805,6 @@ background: linear-gradient(180deg, rgba(255,255,255,0) 44%, rgba(0,0,0,1) 99%);
     width: 100%;
     height: 100vh;
     padding: 150px 50px;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 100px; */
 }
 #ingredientes > div{
     color: white;
@@ -837,9 +836,11 @@ background: linear-gradient(180deg, rgba(255,255,255,0) 44%, rgba(0,0,0,1) 99%);
 
 .imagesmove{
     position: absolute;
+    width: 100%;
+    height: 100%;
 }
 .salsa{
-    width: 27.5%;
+    width: 10%;
 }
 
 .imagesmove img{
@@ -847,6 +848,7 @@ background: linear-gradient(180deg, rgba(255,255,255,0) 44%, rgba(0,0,0,1) 99%);
 }
 
 .salsa{
+    position: absolute;
     aspect-ratio: 10 / 21;
     view-timeline-name: --efecto;
     view-timeline-axis: block;
@@ -855,8 +857,9 @@ background: linear-gradient(180deg, rgba(255,255,255,0) 44%, rgba(0,0,0,1) 99%);
     animation-range: entry 0% cover 70%;
     animation-fill-mode: both;
     transition: all 0.5s;
-    /* transform-origin: 0% 100%; */
     z-index: 1;
+    transform-origin: 0% 100%;
+    top: 0%;
 }
 .salsa img{
     aspect-ratio: 10 / 21;
@@ -873,35 +876,22 @@ background: linear-gradient(180deg, rgba(255,255,255,0) 44%, rgba(0,0,0,1) 99%);
 
 @keyframes changepossalsa {
     0%{
-        /* opacity: 0; */
-        /* scale: 0; */
-        /* transform: translateY(-120px); */
         transform: translateX(300px);
-        /* rotate: -10deg; */
     }
     100%{
-        /* opacity: 1; */
-        /* scale: 50%; */
-        /* transform: translateY(120px); */
         transform: translateX(1100px);
-        /* rotate: -40deg; */
     }
 }
 @keyframes rotarsalsa {
     0%{
-        /* opacity: 0; */
-        /* scale: 0; */
         rotate: -10deg;
     }
     100%{
-        /* opacity: 1; */
-        /* scale: 50%; */
         rotate: -45deg;
     }
 }
 
 .burgers{
-    /* aspect-ratio: 7.2 / 4;     */
     position: absolute;
     view-timeline-name: --efecto;
     view-timeline-axis: block;
@@ -912,10 +902,8 @@ background: linear-gradient(180deg, rgba(255,255,255,0) 44%, rgba(0,0,0,1) 99%);
     transition: all 0.5s;
     z-index: 3;
     top: 0%;
-    /* transform-origin: 0% 100%; */
 }
 .burgers img{
-    /* aspect-ratio: 7.2 / 4;     */
     view-timeline-name: --efecto;
     view-timeline-axis: block;
     animation-timeline: --efecto;
@@ -929,37 +917,24 @@ background: linear-gradient(180deg, rgba(255,255,255,0) 44%, rgba(0,0,0,1) 99%);
 
 @keyframes changeposburgers {
     0%{
-        /* opacity: 0; */
-        /* scale: 0; */
-        /* transform: translateY(-120px); */
         transform: translateX(300px);
         top: 100px;
-        /* rotate: -10deg; */
     }
     100%{
-        /* opacity: 1; */
-        /* scale: 50%; */
-        /* transform: translateY(120px); */
         transform: translateX(1000px);
         top: 300px;
-        /* rotate: -40deg; */
     }
 }
 @keyframes rotarsburgers {
     0%{
-        /* opacity: 0; */
-        /* scale: 0; */
         rotate: -40deg;
     }
     100%{
-        /* opacity: 1; */
-        /* scale: 50%; */
         rotate: 15deg;
     }
 }
 
 .pan{
-    /* aspect-ratio: 7.2 / 4;     */
     position: absolute;
     view-timeline-name: --efecto;
     view-timeline-axis: block;
@@ -970,10 +945,8 @@ background: linear-gradient(180deg, rgba(255,255,255,0) 44%, rgba(0,0,0,1) 99%);
     transition: all 0.5s;
     z-index: 2;
     top: -100px;
-    /* transform-origin: 0% 100%; */
 }
 .pan img{
-    /* aspect-ratio: 7.2 / 4;     */
     view-timeline-name: --efecto;
     view-timeline-axis: block;
     animation-timeline: --efecto;
@@ -987,29 +960,17 @@ background: linear-gradient(180deg, rgba(255,255,255,0) 44%, rgba(0,0,0,1) 99%);
 
 @keyframes changepospan {
     0%{
-        /* opacity: 0; */
-        /* scale: 0; */
-        /* transform: translateY(-120px); */
         transform: translateX(300px);
-        /* rotate: -10deg; */
     }
     100%{
-        /* opacity: 1; */
-        /* scale: 50%; */
-        /* transform: translateY(120px); */
         transform: translateX(1400px);
-        /* rotate: -40deg; */
     }
 }
 @keyframes rotarpan {
     0%{
-        /* opacity: 0; */
-        /* scale: 0; */
         rotate: -10deg;
     }
     100%{
-        /* opacity: 1; */
-        /* scale: 50%; */
         rotate: 45deg;
     }
 }
@@ -1021,7 +982,7 @@ background: linear-gradient(180deg, rgba(255,255,255,0) 44%, rgba(0,0,0,1) 99%);
     margin-bottom: 180px;
     border-radius: 20px;
 }
-#noticias > div:first-child{
+#noticias > div:nth-child(1){
     border-top: 2px solid white;
     border-bottom: 2px solid white;
     display: flex;
@@ -1152,17 +1113,17 @@ background: linear-gradient(180deg, rgba(255,255,255,0) 44%, rgba(0,0,0,1) 99%);
 
 footer{
     background-color: white;
-    height: 120vh;
-    padding: 90px 65px;
+    height: 108vh;
+    padding: 65px 0;
 }
 
 #principal{
     height: 70vh;
     display: flex;
+    padding: 0 90px;
 }
 #principal > div:first-child{
     width: 40%;
-    height: 100%;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
@@ -1212,9 +1173,10 @@ footer{
 
 .reds{
     display: flex;
-    width: 25%;
+    width: 20%;
     justify-content: space-between;
     align-items: center;
+    padding-left: 80px;
 }
 
 .reds a{
@@ -1230,4 +1192,471 @@ footer{
     height: 100%;
     padding: 8px;
     fill: white;
+}
+
+#condiciones{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+#condiciones > div:first-child{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    display: flex;
+    padding: 12px 0;
+    width: 100%;
+}
+
+#condiciones > div:nth-child(1) span{
+    font-size: 140px;
+    font-family: KnockoutBig;
+    margin: 0%;
+    padding: 0%;
+}
+
+.confill2{
+    color: black;
+}
+.sinfill2{
+    color: transparent;
+    -webkit-text-stroke: 2px black;
+}
+
+.terminos{
+    display: flex;
+    font-size: 14px;
+    padding: 0 65px;
+    gap: 40px;
+}
+
+.terminos a{
+    text-decoration: none;
+    color: black;
+    font-family: Knockout;
+}
+
+.terminos div{
+    width: 35%;
+}
+
+.terminos div:nth-child(1) p > b{
+    font-family: KnockoutBig;
+}
+
+.terminos div:nth-child(2){
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 1440px) {
+    #banner span{
+        font-size: 8rem;
+    }
+    .fila{
+        height: 11vh;
+    }
+
+    #desplegable .menu{
+        height: 95vh;
+        justify-content: space-between;
+    }
+    .opciones{
+        height: 49vh;
+    }
+    .opciones a{
+        font-size: 4rem;;
+        width: 70%;
+    }
+    .extras{
+        width: 30rem;
+        justify-content: space-between;
+    }
+    .rueda{
+        width: 250px;
+        height: 250px;
+    }
+    
+    #carta > div:nth-child(1) span {
+        font-size: 8rem;
+    }
+
+    .cartaslide a > .comun img {
+        width: 423px;
+        height: 457px;
+    }
+
+    .moneda img{
+        max-width: 84%;
+    }
+    
+    #coin > div > div:nth-child(2) {
+        width: 50%;
+    }
+
+    #ingredientes > div > div:nth-child(2)> span {
+        font-size: 3.5rem;
+    }
+
+    @keyframes changepossalsa {
+        0%{
+            transform: translateX(200px);
+        }
+        100%{
+            transform: translateX(700px);
+        }
+    }
+
+    @keyframes changeposburgers {
+        0%{
+            transform: translateX(200px);
+            top: 100px;
+        }
+        100%{
+            transform: translateX(600px);
+            top: 300px;
+        }
+    }
+
+    @keyframes changepospan {
+        0%{
+            transform: translateX(200px);
+        }
+        100%{
+            transform: translateX(1000px);
+        }
+    }
+
+    #noticias > div:nth-child(1) span {
+        font-size: 6rem;
+    }
+
+    .articulos .comun > img {
+        height: 350px;
+    }
+
+    .articulos > a > span {
+        font-size: 1.8rem;
+    }
+
+    #principal > div:nth-child(1) > a >svg {
+        height: 180px;
+    }
+
+    .reds {
+        width: 25%;
+    }
+
+    #principal {
+        height: 60vh;
+        display: flex;
+        padding: 0px 60px;
+    }
+    
+    #principal > div:first-child {
+        width: 40%;
+    }
+    
+    .opcion {
+        width: 45%;
+    }
+    
+    .opcion a span {
+        font-size: 2.7rem;
+    }
+    
+    .masopc {
+        padding-left: 0px;
+    }
+
+    #condiciones > div:nth-child(1) span {
+        font-size: 6rem;
+    }
+
+    .terminos {
+        font-size: 11px;
+        gap: 90px;
+    }
+
+    #ingredientes > div {
+        width: 100%;
+    }
+    
+    #ingredientes > div > div:nth-child(2) {
+        width: 50%;
+    }    
+}
+
+@media (max-width: 1250px){
+    #ingredientes > div > div:nth-child(2)> span {
+        font-size: 3rem;
+    } 
+
+    @keyframes changepossalsa {
+        0%{
+            transform: translateX(200px);
+        }
+        100%{
+            transform: translateX(550px);
+        }
+    }
+
+    @keyframes changeposburgers {
+        0%{
+            transform: translateX(200px);
+            top: 100px;
+        }
+        100%{
+            transform: translateX(450px);
+            top: 200px;
+        }
+    }
+
+    @keyframes changepospan {
+        0%{
+            transform: translateX(200px);
+        }
+        100%{
+            transform: translateX(700px);
+        }
+    }
+
+    .salsa {
+        width: 13%;
+    }
+
+    .burgers {
+        width: 40%;
+    }
+
+    .pan{
+        width: 40%;
+    }
+}
+
+@media (max-width: 1024px){
+    #banner span{
+        font-size: 6rem;
+    }
+    .fila{
+        height: 9vh;
+    }
+
+    #slider .oferta{
+        width: 100%;
+    }
+
+    #carta > div:nth-child(1) span {
+        font-size: 6rem;
+    }
+
+    #contador > div span {
+        font-size: 2rem;
+    }
+    
+    #contador .nums img {
+        width: 65px;
+    }
+
+    #coin{
+        height: 55vh;
+    }
+    
+    #coin > div > div:nth-child(2) > span {
+        font-size: 3rem;
+    }
+
+    #coin > div > div:nth-child(2) {
+        width: 85%;
+    }
+
+    #foodtruck .content {
+        width: 80%;
+    }
+
+    #foodtruck .content > div > span {
+        font-size: 3.5rem;
+    }
+
+    #noticias > div:nth-child(1) span {
+        font-size: 5rem;
+    }
+
+    .articulos .comun > img {
+        height: 210px;
+    }
+
+    .articulos > a > span {
+        font-size: 1.5rem;
+    }
+
+    #principal > div:nth-child(1) > a >svg {
+        height: 145px;
+    }
+
+    #principal > div:first-child {
+        width: 30%;
+    }
+
+    .opcion {
+        width: 53%;
+    }
+
+    .reds {
+        width: 25%;
+    }
+
+    #condiciones > div:nth-child(1) span {
+        font-size: 5rem;
+    }
+
+    .terminos div {
+        width: 46%;
+    }
+
+    .cerrar {
+        width: 6rem;
+    }
+
+    .extras a {
+        font-size: 1.3rem;
+        width: 100%;
+    }
+
+    .rrss {
+        width: 30%;
+    }
+
+    .opciones a {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px){
+    #carta .cartaslide {
+        padding: 0px 35px;
+    }
+
+    .cartaslide a > .comun img {
+        width: 316px;
+        height: 316px;
+    }
+    .cartaslide span {
+        font-size: 1.3rem;
+    }
+
+    #carta .cartaslide {
+        height: 40vh;
+    }
+
+    #contador{
+        margin-bottom: 0px;
+    }
+    #contador > div > div:nth-child(1){
+        margin: auto;
+        width: 60%;
+        text-align: center;
+    }
+
+    #coin {
+        flex-flow: column;
+        height: 120vh;
+        padding: 0;
+    }
+
+    #coin > div {
+        flex-flow: column;
+        justify-content: center;
+    }
+
+    .moneda{
+        scale: 65%;
+    }
+    .moneda img{
+        max-width: 100%;
+    }
+
+    #foodtruck .content {
+        padding: 40px;
+    }
+
+    #ingredientes > div > div:nth-child(2)> span {
+        font-size: 2.5rem;
+    }
+
+    .salsa {
+        width: 17.5%;
+    }
+    .burgers {
+        width: 63%;
+    }
+    .pan {
+        width: 63%;
+    }
+
+    @keyframes changepossalsa {
+        0%{
+            transform: translateX(50px);
+            top: 0px;
+        }
+        100%{
+            transform: translateX(350px);
+            top: 100px;
+        }
+    }
+
+    @keyframes changeposburgers {
+        0%{
+            transform: translateX(50px);
+            top: 0px;
+        }
+        100%{
+            transform: translateX(250px);
+            top: 300px;
+        }
+    }
+
+    @keyframes changepospan {
+        0%{
+            transform: translateX(50px);
+        }
+        100%{
+            transform: translateX(300px);
+        }
+    }
+
+    .reds {
+        position: relative;
+        bottom: 0;
+        width: 30%;
+        padding-left: 40px;
+    }
+
+    #principal {
+        height: auto;
+        display: flex;
+        padding: 0px 60px;
+        flex-wrap: wrap;
+    }
+
+    #principal > div:first-child {
+        width: 50%;
+        height: 45%;
+        margin-bottom: 30px;
+    }
+
+    .opcion {
+        width: 55%;
+    }
+
+    .masopc{
+        width: 45%;
+        padding-left: 33px;	
+    }
+
+    .opcion a span {
+        font-size: 2rem;
+    }
 }

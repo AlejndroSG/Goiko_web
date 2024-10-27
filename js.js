@@ -48,19 +48,21 @@ document.addEventListener("DOMContentLoaded", ()=>{
     })
 
     window.addEventListener("scroll", () =>{
-        if(window.scrollY > slider.offsetTop - window.innerHeight/4){
-            sliderdivs.forEach(div => {
-                div.style.opacity = "1";
-            })
-            slider.style.borderRight = "0";
-            slider.style.borderLeft = "0";
-        }else{
-            sliderdivs.forEach(div => {
-                div.style.opacity = "0";
-            })
-            slider.style.border = "2px solid white";
-        }
-    })
+            if(window.scrollY > slider.offsetTop - window.innerHeight/4){
+                if(innerWidth > 768){
+                sliderdivs.forEach(div => {
+                    div.style.opacity = "1";
+                })
+                slider.style.borderRight = "0";
+                slider.style.borderLeft = "0";
+                }
+            }else{
+                sliderdivs.forEach(div => {
+                    div.style.opacity = "0";
+                })
+                slider.style.border = "2px solid white";
+            }
+        })
 
     rueda.addEventListener("mouseover", () =>{
         rueda.style.backgroundColor = "white";
