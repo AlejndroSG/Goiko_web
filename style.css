@@ -22,26 +22,11 @@ body{
 header{
     position: fixed;
     height: 15vh;
-    width: 100%;
+    width: 100vw;
     padding: 30px 60px;
     z-index: 990;
     transition: all 0.5s;
-    /* view-timeline-name: --efecto;
-    view-timeline-axis: block;
-    animation-timeline: --efecto;
-    animation-name: anime;
-    animation-range: entry 100% cover 25%;
-    animation-fill-mode: both; */
 }
-
-/* @keyframes anime {
-    100%{git 
-        opacity: 1;
-    }
-    25%{
-        opacity: 0;
-    }
-} */
 
 nav{
     height: auto;
