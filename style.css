@@ -1042,7 +1042,7 @@ background: linear-gradient(180deg, rgba(255,255,255,0) 44%, rgba(0,0,0,1) 99%);
   border-radius: 99rem;
   border-width: 2px;
   overflow: hidden;
-  padding: 0.8rem 3rem;
+  padding: 1.5rem 4rem;
   position: relative;
 }
 
@@ -1052,6 +1052,7 @@ background: linear-gradient(180deg, rgba(255,255,255,0) 44%, rgba(0,0,0,1) 99%);
   place-items: center;
   position: absolute;
   transition: opacity 0.2s ease;
+  font-size: 1.2rem;
 }
 
 .btn-23 .marquee {

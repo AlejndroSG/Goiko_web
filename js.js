@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     window.addEventListener("scroll", () =>{
             if(window.scrollY > slider.offsetTop - window.innerHeight/4){
-                if(innerWidth > 768 && innerWidth < 425){
+                if(innerWidth > 768){
                 sliderdivs.forEach(div => {
                     div.style.opacity = "1";
                 })
